@@ -1,0 +1,34 @@
+- type: replace
+  path: /instance_groups/name=web/jobs/name=atc/properties/credhub?
+  value:
+    client_id: ((credhub_client_id))
+    client_secret: ((credhub_client_secret))
+    tls:
+      insecure_skip_verify: false
+      ca_cert: |
+        -----BEGIN CERTIFICATE-----
+        MIIEJDCCAoygAwIBAgIRAMXxuN/NIJVrih004BOgTIkwDQYJKoZIhvcNAQELBQAw
+        OzEMMAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MRMwEQYDVQQD
+        EwpDcmVkSHViIENBMB4XDTE4MDEwMjE2NDcwMFoXDTE5MDEwMjE2NDcwMFowOzEM
+        MAoGA1UEBhMDVVNBMRYwFAYDVQQKEw1DbG91ZCBGb3VuZHJ5MRMwEQYDVQQDEwpD
+        cmVkSHViIENBMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAwA+kETjA
+        1eHz9N4bWMxR8oyoZEFO0raLUAZwaXi/85Om3XkuRRYghxbDIazxohaJzXPoePHF
+        UFeHTg9LzFKbW/F6mOxPSJXbYbqLgzILZ+fQvOd07bYKKSNhEx7fvFezReSuetRw
+        TkKuv2MDSTX1xGWyTmOZOxiz3N3edy80sEMRBwMKyO4bcLGNg2csKI1hiCpmW7/T
+        NibvteYgye12IP/N8/f/AlINBto8osYEAtpTuMQMBdb0ovTyaucATkZt0EMYSR7O
+        JOLEO199lVYO94PLmRY9TW98s+DqcS4os1eBa0XEej0ipMkjQVcAq6vKZPrsW5XG
+        wgtkbVD7uC9GkhEMF2++H5puofjazdloftitR1SvD46feYuT8aXLOPFuobdamcds
+        mfnzgmew2lldMe6plldauQC2DD0M05T9ciy2IfT9ziTlGRCYQR8K4hnYBNma4X9i
+        dYBe26zRgDO5bXv4DuXbYlXgXuq8aVbDMskgpVPjNxuaflNbjZz44Lm3AgMBAAGj
+        IzAhMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEB
+        CwUAA4IBgQB6xnyn49GLOzWpC5IC7h4UJFLI3WM1gYdj1ityM7vFO1F5L4e6ZSLg
+        qtCriC6wOJrp9umAeiflP7SZJwrrkCfS7GrrvX6h7154KbKy6NTHYtyo/Tyy0jwx
+        H0d6oUD2H1tAMCegAIk2xJOuEZSgjtmral8ILGNqpZUi+hiHC/g3FRpvjG6apRlP
+        IWyM7OBHmX/SDvD5hrvTHMSIPbDIaqh7cNnNOuR2Np3//RI/EivINRo5ezptGUNs
+        1yFTm16+FEc1CWiy3mMEbOr8PYBwvxmgIKrj34LNxQ/t2nOg/mS3YHKuNyM3u3Th
+        0gLdhOjft8+QjAQa4MqOspAkSknDj6N70nHmBZOpUA8/vHtb6eyQKdLWt7X6vnan
+        sbxhIhJylj7K9WIaMd+KcDycVIQgHQWVEO7yH69ALasXyfNS0GFMOAnroC5kDhcE
+        Z0kB0bRxBgKi9NGn600Mn6B3WGHDvISGl/fdEPHiLdo2ATlUl4j5YkMwwtTRI/eE
+        q0qUn4bTOnA=
+        -----END CERTIFICATE-----
+    url: ((credhub_url))
